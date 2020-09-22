@@ -18,14 +18,16 @@ int main() {
 //Test HasBalancedParentheses();
  std::string statement1 = "((())())";
  if(HasBalancedParentheses(statement1)){
-   	std::cout << "Is it Ballanced " << std::endl;
+   	std::cout << "Is it Balanced " << std::endl;
  }
  else {
    std::cout<< "not balanced" << std::endl;
  }
 // Test InDogish();
+
+
  std::string mydogs = "dpoags";
- if(InDogish(mydogs)){
+ if( InDogish(mydogs) ){
    	std::cout << "Part of Dogish? " << std::endl;
  }
 

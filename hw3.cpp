@@ -22,15 +22,15 @@ bool DogishHelper( std::string word, char letter){
  return DogishHelper(word.substr(1,word.length()), letter);
     }
 }
-bool InDogsh(std::string string){
+bool InDogish(std::string word){
 
-  if (DogishHelper(string, 'd')){
-    std::string hold = string.substr(string.find('d'));
+  if (DogishHelper(word, 'd')){
+    std::string hold = word.substr(word.find('d',0), word.length());
 
     if (DogishHelper(hold, 'o')){
-      hold = hold.substr(string.find('o'));
+      hold = hold.substr(hold.find('o',0), hold.length());
 
-      if(DogishHelper(hold, 'g')){
+      if(DogishHelper(hold, 'g'), hold.length()){
         return 1;
       }
 
@@ -41,7 +41,7 @@ return 0;
 
 void ReverseArray(int arr[], int length){
 
-int hold;
+ int hold;
 
 for (int i = 0; i < length/2; i++){
     hold = arr[i];
