@@ -30,7 +30,7 @@ bool InDogish(std::string word){
     if (DogishHelper(hold, 'o')){
       hold = hold.substr(hold.find('o',0), hold.length());
 
-      if(DogishHelper(hold, 'g'), hold.length()){
+      if(DogishHelper(hold, 'g')){
         return 1;
       }
 
