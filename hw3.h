@@ -1,5 +1,6 @@
 #ifndef HW3_H
 #define HW3_H
+#include <string>
 
 bool DogishHelper( std::string , char );
 void ReverseArray(int[], int );
