@@ -6,6 +6,12 @@ length only required due to library restriction.
 *
 HasBalancedParentheses: delcare counters, test for even amount,
 test end conditions
+
+DogisHelper: take word and letter, check if empty, check if first letter matches next letter in key, shrink word until first letter equals key or empty
+InDogish:Use helper, if found pass chopped string to next key. If not return false
+
+InXish: check empty key, get first letter of key, check if key exists,
+pass chopped string starting at first occurence of key and pass next letter of key. repeat.
 */
 #include <string>
 #include <iostream>
@@ -18,9 +24,11 @@ bool DogishHelper( std::string word, char letter){
  if(word[0] == letter) {
      ///COMPLETE THIS TO HELP WITH RECURSION SETUP 
     return 1;
-    } else {
+  }
+  else {
  return DogishHelper(word.substr(1,word.length()), letter);
-    }
+  }
+
 }
 bool InDogish(std::string word){
 
