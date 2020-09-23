@@ -39,6 +39,20 @@ bool InDogish(std::string word){
 return 0;
 }
 
+bool InXish(std::string word, std::string lang){
+  if(lang.length()==0){
+    return 1;
+  }
+
+  char lang_index = lang[0];
+
+  if (!DogishHelper(word, lang_index)){
+    return 0;
+  }
+
+  return InXish(word.substr(word.find(lang_index), word.length()), lang.substr(1,lang.length()));
+}
+
 void ReverseArray(int arr[], int length){
 
  int hold;
